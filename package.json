@@ -11,7 +11,7 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.121.0",
+    "@aws-cdk/assert": "^1.121.0",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
     "aws-cdk": "1.121.0",
@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "@aws-cdk/aws-lambda": "^1.121.0",
-    "@aws-cdk/core": "1.121.0",
+    "@aws-cdk/cloud-assembly-schema": "^1.121.0",
+    "@aws-cdk/core": "^1.121.0",
     "source-map-support": "^0.5.16"
   }
 }
