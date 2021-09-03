@@ -1,0 +1,24 @@
+name: Synth
+on: [push]
+
+jobs:
+  aws_cdk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+      - uses: actions/checkout@v2
+      - name: Installing
+        run: npm install
+      - name: Run test
+        run: npm run test
+      - name: Run synth
+        run: npx cdk synth
+      - name: Archive cdk.out
+        uses: actions/upload-artifact@v2
+        with:
+          name: cdk.out
+          path: cdk.out/
+    container:
+      image: "jsii/superchain"
